@@ -1,0 +1,346 @@
+/* Mirror House Photography — custom design system */
+
+:root {
+  --mh-cream: #f4efe7;
+  --mh-ink: #171311;
+  --mh-charcoal: #221f1f;
+  --mh-gold: #c6a15b;
+  --mh-rose: #7a3f46;
+  --mh-serif: Georgia, 'Times New Roman', serif;
+}
+
+/* ── base ─────────────────────────────────────────── */
+
+.mh-root {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--mh-cream);
+  color: var(--mh-ink);
+}
+
+/* ── navigation ───────────────────────────────────── */
+
+.mh-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6vw;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--mh-cream) 70%, transparent);
+}
+
+.mh-logo {
+  font-family: var(--mh-serif);
+  font-size: 1.3rem;
+  color: var(--mh-ink);
+  text-decoration: none;
+}
+
+.mh-nav-links {
+  display: flex;
+  gap: 0;
+}
+
+.mh-nav-links a {
+  color: var(--mh-ink);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.mh-nav-links a:hover {
+  opacity: 1;
+}
+
+/* ── hero ─────────────────────────────────────────── */
+
+.mh-hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  padding: 120px 8vw 80px;
+}
+
+.mh-eyebrow,
+.mh-section-num {
+  color: var(--mh-gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mh-h1 {
+  font-family: var(--mh-serif);
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  line-height: 0.95;
+  margin: 0 0 20px;
+  color: var(--mh-ink);
+  font-weight: normal;
+}
+
+.mh-h2 {
+  font-family: var(--mh-serif);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  margin: 0 0 20px;
+  font-weight: normal;
+}
+
+.mh-hero-copy p {
+  max-width: 560px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+/* ── buttons ──────────────────────────────────────── */
+
+.mh-btn {
+  display: inline-block;
+  margin-top: 24px;
+  border: 1px solid var(--mh-ink);
+  background: var(--mh-ink);
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.mh-btn:hover {
+  opacity: 0.85;
+}
+
+.mh-btn-ghost {
+  border-color: var(--mh-gold);
+  background: transparent;
+  color: var(--mh-gold);
+  margin-top: 16px;
+}
+
+/* ── mirror card ──────────────────────────────────── */
+
+.mh-mirror-card {
+  aspect-ratio: 3 / 4;
+  border-radius: 50% 50% 24px 24px;
+  padding: 14px;
+  background: linear-gradient(145deg, #d7c7a1, #6f5b3c, #fff2c2);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.25);
+}
+
+.mh-mirror-glass {
+  height: 100%;
+  border-radius: inherit;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.7), transparent 25%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(30, 30, 30, 0.2)),
+    linear-gradient(160deg, #c9b99a 0%, #8a7055 50%, #e8d8b8 100%);
+  background-size: cover;
+  color: white;
+  font-family: var(--mh-serif);
+  font-size: 2rem;
+  text-shadow: 0 2px 20px black;
+}
+
+/* ── sections ─────────────────────────────────────── */
+
+.mh-section {
+  padding: 110px 8vw;
+}
+
+.mh-section-light {
+  background: #fffaf2;
+}
+
+.mh-section-dark {
+  background: var(--mh-charcoal);
+  color: var(--mh-cream);
+}
+
+.mh-section-dark .mh-h2 {
+  color: var(--mh-cream);
+}
+
+.mh-section-intro {
+  max-width: 640px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  opacity: 0.85;
+}
+
+/* ── gallery grid ─────────────────────────────────── */
+
+.mh-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.mh-tile {
+  min-height: 320px;
+  padding: 28px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 24px;
+  background: #ccc;
+  font-family: var(--mh-serif);
+  font-size: 1.8rem;
+  color: white;
+  user-select: none;
+}
+
+.mh-tile-prom {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55)),
+    linear-gradient(135deg, #3d1a2e 0%, #7a3f5c 60%, #c48a8a 100%);
+}
+
+.mh-tile-senior {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55)),
+    linear-gradient(135deg, #1a2a3d 0%, #3f5c7a 60%, #8aabc4 100%);
+}
+
+.mh-tile-family {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55)),
+    linear-gradient(135deg, #2a3d1a 0%, #5c7a3f 60%, #a4c48a 100%);
+}
+
+/* ── private gate ─────────────────────────────────── */
+
+.mh-gate {
+  margin-top: 40px;
+  padding: 36px;
+  border: 1px solid rgba(198, 161, 91, 0.45);
+  border-radius: 24px;
+  max-width: 520px;
+}
+
+.mh-gate h3 {
+  font-family: var(--mh-serif);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0 0 8px;
+  color: var(--mh-cream);
+}
+
+.mh-gate p {
+  color: rgba(244, 239, 231, 0.7);
+  margin: 0;
+}
+
+/* ── private room panels ──────────────────────────── */
+
+.mh-private-room {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.mh-private-panel {
+  min-height: 280px;
+  padding: 32px 28px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #352828, #120f0f);
+  border: 1px solid rgba(198, 161, 91, 0.25);
+}
+
+.mh-private-panel h3 {
+  font-family: var(--mh-serif);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0 0 12px;
+  color: var(--mh-gold);
+}
+
+.mh-private-panel p {
+  color: rgba(244, 239, 231, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── booking form ─────────────────────────────────── */
+
+.mh-section-booking {
+  background: var(--mh-cream);
+}
+
+.mh-form {
+  display: grid;
+  gap: 16px;
+  max-width: 620px;
+  margin-top: 36px;
+}
+
+.mh-field {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #cfc4b4;
+  border-radius: 14px;
+  font: inherit;
+  font-size: 1rem;
+  background: white;
+  color: var(--mh-ink);
+  transition: border-color 0.2s;
+}
+
+.mh-field:focus {
+  outline: none;
+  border-color: var(--mh-gold);
+}
+
+textarea.mh-field {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.mh-form-success {
+  padding: 24px;
+  border: 1px solid rgba(198, 161, 91, 0.5);
+  border-radius: 14px;
+  background: rgba(198, 161, 91, 0.08);
+  color: var(--mh-ink);
+  font-family: var(--mh-serif);
+  font-size: 1.1rem;
+  max-width: 620px;
+}
+
+/* ── responsive ───────────────────────────────────── */
+
+@media (max-width: 850px) {
+  .mh-hero,
+  .mh-gallery-grid,
+  .mh-private-room {
+    grid-template-columns: 1fr;
+  }
+
+  .mh-nav-links {
+    display: none;
+  }
+
+  .mh-mirror-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}

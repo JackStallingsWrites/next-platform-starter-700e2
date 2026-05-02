@@ -1,63 +1,79 @@
-import Link from 'next/link';
-import { Card } from 'components/card';
-import { ContextAlert } from 'components/context-alert';
-import { Markdown } from 'components/markdown';
-import { RandomQuote } from 'components/random-quote';
-import { getNetlifyContext } from 'utils';
+import MirrorNav from 'components/mirror-nav';
+import PrivateRoomGate from 'components/private-room-gate';
+import BookingForm from 'components/booking-form';
 
-const contextExplainer = `
-The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
-([docs](https://docs.netlify.com/configure-builds/environment-variables/#build-metadata)):
-`;
-
-const preDynamicContentExplainer = `
-The card content below is fetched by the client-side from \`/quotes/random\` (see file \`app/quotes/random/route.js\`) with a different quote shown on each page load:
-`;
-
-const ctx = getNetlifyContext();
+export const metadata = {
+    title: 'Mirror House Photography',
+    description: 'What the camera sees. What the mirror keeps.'
+};
 
 export default function Page() {
     return (
-        <div className="flex flex-col gap-12 sm:gap-16">
-            <section>
-                <ContextAlert className="mb-6" />
-                <h1 className="mb-4">Netlify Platform Starter – Next.js</h1>
-                <p className="mb-6 text-lg">
-                    Deploy the latest version of Next.js — including Turbopack, React Compiler, and the new caching APIs
-                    — on Netlify in seconds. No configuration or custom adapter required.
-                </p>
-                <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
-                    Read the Docs
-                </Link>
-            </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-            </section>
-        </div>
-    );
-}
+        <>
+            <MirrorNav />
 
-function RuntimeContextCard() {
-    const title = `Netlify Context: running in ${ctx} mode.`;
-    if (ctx === 'dev') {
-        return (
-            <Card title={title}>
-                <p>Next.js will rebuild any page you navigate to, including static pages.</p>
-            </Card>
-        );
-    } else {
-        const now = new Date().toISOString();
-        return (
-            <Card title={title}>
-                <p>This page was statically-generated at build time ({now}).</p>
-            </Card>
-        );
-    }
+            <main>
+                {/* ── Hero ─────────────────────────────────── */}
+                <section className="mh-hero">
+                    <div className="mh-hero-copy">
+                        <span className="mh-eyebrow">Portraits · Prom · Boudoir</span>
+                        <h1 className="mh-h1">What the camera sees. What the mirror keeps.</h1>
+                        <p>
+                            Public galleries for celebration. Private rooms for the work that asks for
+                            softness, trust, and discretion.
+                        </p>
+                        <a href="#front" className="mh-btn">
+                            Enter the front room
+                        </a>
+                    </div>
+
+                    <div className="mh-mirror-card" aria-hidden="true">
+                        <div className="mh-mirror-glass">
+                            <span>Look closer</span>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── Front of the Mirror ───────────────────── */}
+                <section id="front" className="mh-section mh-section-light">
+                    <span className="mh-section-num">01</span>
+                    <h2 className="mh-h2">Front of the Mirror</h2>
+                    <p className="mh-section-intro">
+                        Prom, senior portraits, graduation, couples, families, and public celebration
+                        work.
+                    </p>
+
+                    <div className="mh-gallery-grid">
+                        <article className="mh-tile mh-tile-prom">Prom Night</article>
+                        <article className="mh-tile mh-tile-senior">Senior Portraits</article>
+                        <article className="mh-tile mh-tile-family">Family Sessions</article>
+                    </div>
+                </section>
+
+                {/* ── Behind the Mirror ─────────────────────── */}
+                <section id="mirror" className="mh-section mh-section-dark">
+                    <span className="mh-section-num">02</span>
+                    <h2 className="mh-h2">Behind the Mirror</h2>
+                    <p className="mh-section-intro" style={{ color: 'rgba(244,239,231,0.75)' }}>
+                        Private galleries for boudoir, editorial intimacy, couples, maternity, and
+                        personal reclamation sessions.
+                    </p>
+
+                    <PrivateRoomGate />
+                </section>
+
+                {/* ── Book ──────────────────────────────────── */}
+                <section id="book" className="mh-section mh-section-booking">
+                    <span className="mh-section-num">03</span>
+                    <h2 className="mh-h2">Book a Session</h2>
+                    <p className="mh-section-intro">
+                        Whether it&apos;s a milestone moment or a deeply personal one — every session
+                        starts with a conversation.
+                    </p>
+
+                    <BookingForm />
+                </section>
+            </main>
+        </>
+    );
 }
