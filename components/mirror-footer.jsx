@@ -18,7 +18,7 @@ export default function MirrorFooter() {
                         <p className="mh-footer-heading">Connect</p>
                         <a href="#book">Book a session</a>
                         <a href="mailto:silver@thesilverseraphim.com">silver@thesilverseraphim.com</a>
-                        <a href="https://thesilverseraphim.com" target="_blank" rel="noopener noreferrer">thesilverseraphim.com</a>
+                        <a href="https://instagram.com/thesilverseraphim" target="_blank" rel="noopener noreferrer">@thesilverseraphim</a>
                     </div>
                 </div>
             </div>
