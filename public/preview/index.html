@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Silver Seraphim</title>
+  <meta name="description" content="What the camera sees. What the mirror keeps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ────────────────────────────── -->
+  <header class="nav">
+    <a href="#" class="logo">The Silver Seraphim</a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#front">Front</a>
+      <a href="#mirror">Behind the Mirror</a>
+      <a href="#book">Book</a>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <!-- mobile drawer -->
+  <nav class="drawer" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#front">Front</a>
+    <a href="#mirror">Behind the Mirror</a>
+    <a href="#book">Book</a>
+  </nav>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Portraits · Prom · Boudoir</span>
+        <h1>What the camera sees.<br>What the mirror keeps.</h1>
+        <p>
+          Public galleries for celebration. Private rooms for the work that
+          asks for softness, trust, and discretion.
+        </p>
+        <a href="#front" class="btn">Enter the front room</a>
+      </div>
+
+      <div class="mirror-card" aria-hidden="true">
+        <div class="mirror-glass">Look closer</div>
+      </div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────── -->
+    <section id="about" class="section section-about">
+      <div class="about-grid">
+        <div class="fade">
+          <span class="section-num">00</span>
+          <h2>Two rooms.<br>One mirror.</h2>
+        </div>
+
+        <div class="fade about-body" data-delay="120">
+          <p>
+            Some images belong in the light — prom nights, graduation mornings,
+            the first family photo after the move. Those live in the front room,
+            open to anyone who visits.
+          </p>
+          <p>
+            Others belong in softness. Boudoir sessions, intimate couples work,
+            maternity portraits, personal reclamation shoots — those are held
+            behind the mirror, accessible only to the people who made them.
+          </p>
+          <p>
+            Every session starts with a conversation about which room the images
+            should live in, and why.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Front of the Mirror ───────────────────── -->
+    <section id="front" class="section section-light">
+      <div class="fade">
+        <span class="section-num">01</span>
+        <h2>Front of the Mirror</h2>
+        <p class="section-intro">
+          Prom, senior portraits, graduation, couples, families, and
+          public celebration work.
+        </p>
+      </div>
+
+      <div class="gallery-grid" style="margin-top:44px">
+        <article class="tile tile-prom fade" data-delay="0">Prom Night</article>
+        <article class="tile tile-senior fade" data-delay="80">Senior Portraits</article>
+        <article class="tile tile-family fade" data-delay="160">Family Sessions</article>
+      </div>
+    </section>
+
+    <!-- ── Behind the Mirror ─────────────────────── -->
+    <section id="mirror" class="section section-dark">
+      <div class="fade">
+        <span class="section-num">02</span>
+        <h2>Behind the Mirror</h2>
+        <p class="section-intro">
+          Private galleries for boudoir, editorial intimacy, couples,
+          maternity, and personal reclamation sessions.
+        </p>
+      </div>
+
+      <div class="gate fade" data-delay="80">
+        <h3>This room is private.</h3>
+        <p>Confirm you are 18+ to preview the private experience.</p>
+        <button id="unlockBtn" class="btn ghost">I am 18+</button>
+      </div>
+
+      <div id="privateRoom" class="private-room hidden">
+        <div class="private-panel fade">
+          <h3>Boudoir</h3>
+          <p>Soft light. Clean direction. Images held with care.</p>
+        </div>
+        <div class="private-panel fade" data-delay="80">
+          <h3>Couples</h3>
+          <p>Private, cinematic, emotionally honest sessions.</p>
+        </div>
+        <div class="private-panel fade" data-delay="160">
+          <h3>Client Portal</h3>
+          <p>
+            Password-protected galleries sent securely after your session.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Book ──────────────────────────────────── -->
+    <section id="book" class="section section-booking">
+      <div class="fade">
+        <span class="section-num">03</span>
+        <h2>Book a Session</h2>
+        <p class="section-intro">
+          Whether it's a milestone moment or a deeply personal one —
+          every session starts with a conversation.
+        </p>
+      </div>
+
+      <form
+        id="bookingForm"
+        class="booking-form fade"
+        data-delay="80"
+        name="silver-seraphim-inquiry"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="silver-seraphim-inquiry" />
+        <input type="hidden" name="bot-field" />
+
+        <input  class="field" type="text"  name="name"         placeholder="Your name"    required />
+        <input  class="field" type="email" name="email"        placeholder="Email address" required />
+        <select class="field"              name="session-type" required>
+          <option value="" disabled selected>Session type</option>
+          <option>Prom / Senior</option>
+          <option>Family / Couples</option>
+          <option>Boudoir / Private</option>
+        </select>
+        <textarea class="field" name="message" placeholder="Tell me what you want the mirror to reveal"></textarea>
+        <button class="btn" type="submit">Send inquiry</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">The Silver Seraphim</span>
+        <p>Photography for celebration and for softness.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <p class="footer-heading">Work</p>
+          <a href="#front">Prom &amp; Senior</a>
+          <a href="#front">Family &amp; Couples</a>
+          <a href="#mirror">Boudoir &amp; Private</a>
+        </div>
+        <div>
+          <p class="footer-heading">Connect</p>
+          <a href="#book">Book a session</a>
+          <a href="mailto:silver@thesilverseraphim.com">silver@thesilverseraphim.com</a>
+          <a href="https://thesilverseraphim.com" target="_blank" rel="noopener">thesilverseraphim.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© 2025 The Silver Seraphim</span>
+      <span>All galleries are private by default.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
