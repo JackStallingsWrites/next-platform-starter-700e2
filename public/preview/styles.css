@@ -323,7 +323,7 @@ body {
 .gate > p { font-size: .9rem; color: rgba(245,240,232,.55); margin: 0; line-height: 1.65; }
 
 /* private panels */
-.private-room { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 52px; }
+.private-room { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 52px; }
 .private-panel {
   padding: 36px 30px;
   border-radius: 2px;
