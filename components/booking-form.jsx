@@ -31,11 +31,11 @@ export default function BookingForm() {
         <form
             className="mh-form"
             onSubmit={handleSubmit}
-            name="mirror-house-inquiry"
+            name="silver-seraphim-inquiry"
             data-netlify="true"
             netlify-honeypot="bot-field"
         >
-            <input type="hidden" name="form-name" value="mirror-house-inquiry" />
+            <input type="hidden" name="form-name" value="silver-seraphim-inquiry" />
             <input type="hidden" name="bot-field" />
 
             <input className="mh-field" type="text" name="name" placeholder="Your name" required />
@@ -57,7 +57,7 @@ export default function BookingForm() {
             <textarea
                 className="mh-field"
                 name="message"
-                placeholder="Tell me what you want the mirror to reveal"
+                placeholder="Tell me what you're carrying into the room"
             />
             <button className="mh-btn" type="submit">
                 Send inquiry
