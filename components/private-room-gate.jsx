@@ -28,6 +28,13 @@ export default function PrivateRoomGate() {
                         </p>
                     </div>
                     <div className="mh-private-panel">
+                        <h3>Blind Date Boudoir</h3>
+                        <p>
+                            No planning. No Pinterest board. You show up, I take care of
+                            the rest — and you meet yourself for the first time.
+                        </p>
+                    </div>
+                    <div className="mh-private-panel">
                         <h3>Couples</h3>
                         <p>
                             What you look like when no one else is watching.

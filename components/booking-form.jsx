@@ -53,6 +53,7 @@ export default function BookingForm() {
                 <option>Prom / Senior</option>
                 <option>Family / Couples</option>
                 <option>Boudoir / Private</option>
+                <option>Blind Date Boudoir</option>
             </select>
             <textarea
                 className="mh-field"

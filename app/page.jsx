@@ -25,8 +25,9 @@ export default function Page() {
                             What the mirror keeps.
                         </h1>
                         <p>
-                            Two kinds of images. One photographer who knows the difference
-                            between a moment worth sharing and one worth protecting.
+                            Two kinds of images. One photographer — silver-haired, boot-wearing,
+                            and unapologetically in your corner — who knows the difference between
+                            a moment worth sharing and one worth protecting.
                         </p>
                         <a href="#front" className="mh-btn">Enter the front room</a>
                     </div>
@@ -47,17 +48,18 @@ export default function Page() {
                         <ScrollFade delay={130}>
                             <div className="mh-about-body">
                                 <p>
-                                    Some images belong in the light — prom nights, graduation mornings,
-                                    the first family photo after a move. Those live in the front room,
-                                    open to anyone who visits.
+                                    Some images are for sharing — prom nights, graduation mornings,
+                                    the first family portrait after a move. They belong in the light.
                                 </p>
                                 <p>
-                                    Others belong in softness. Boudoir sessions, intimate couples work,
-                                    maternity portraits, personal reclamation shoots — those are held
-                                    behind the mirror, seen only by the people who made them.
+                                    Others are yours alone. Not because they&apos;re shameful.
+                                    Because they&apos;re sacred. Because for most of history, women
+                                    didn&apos;t get to decide what happened to their own image —
+                                    and some of us are done with that.
                                 </p>
                                 <p>
-                                    Every session starts with one question: which room does this belong in?
+                                    Every session starts with a conversation: what do you want to
+                                    walk out of this room owning?
                                 </p>
                             </div>
                         </ScrollFade>
@@ -110,7 +112,7 @@ export default function Page() {
                         <h2 className="mh-h2">Behind the Mirror</h2>
                         <p className="mh-section-intro">
                             Boudoir, intimate couples, maternity, and personal reclamation sessions.
-                            Held carefully. Shared only with you.
+                            What happens in this room belongs to you — your gallery, your eyes, your call.
                         </p>
                     </ScrollFade>
 
