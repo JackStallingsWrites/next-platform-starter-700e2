@@ -60,8 +60,7 @@ document.querySelector('#bookingForm').addEventListener('submit', async (e) => {
   }
 
   form.innerHTML = `
-    <div style="padding:28px;border:1px solid rgba(198,161,91,.45);border-radius:14px;
-      font-family:Georgia,serif;font-size:1.1rem;background:rgba(198,161,91,.07)">
-      Your inquiry was sent. I'll be in touch within 48 hours.
+    <div style="padding:28px 32px;border-left:2px solid #b8924a;font-family:'Cormorant Garant',Georgia,serif;font-style:italic;font-weight:300;font-size:1.25rem;line-height:1.65;color:#16100f">
+      Received. I'll be in touch within 48 hours — usually sooner.
     </div>`;
 });
