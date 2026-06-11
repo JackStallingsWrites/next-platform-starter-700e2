@@ -22,7 +22,7 @@ export default function BookingForm() {
     if (submitted) {
         return (
             <div className="mh-form-success">
-                Your inquiry was sent. I'll be in touch within 48 hours.
+                Received. I&apos;ll be in touch within 48 hours — usually sooner.
             </div>
         );
     }
