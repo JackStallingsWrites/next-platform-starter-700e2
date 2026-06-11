@@ -17,7 +17,7 @@ export default function MirrorNav() {
     return (
         <header className={`mh-nav${scrolled ? ' mh-nav--scrolled' : ''}`}>
             <a href="#" className="mh-logo" onClick={close}>
-                Mirror House
+                The Silver Seraphim
             </a>
 
             {/* desktop links */}

@@ -2,10 +2,10 @@ import '../styles/mirror-house.css';
 
 export const metadata = {
     title: {
-        template: '%s | Mirror House Photography',
-        default: 'Mirror House Photography'
+        template: '%s | The Silver Seraphim',
+        default: 'The Silver Seraphim'
     },
-    description: 'What the camera sees. What the mirror keeps.'
+    description: 'What the camera sees. What the mirror keeps. — thesilverseraphim.com'
 };
 
 export default function RootLayout({ children }) {

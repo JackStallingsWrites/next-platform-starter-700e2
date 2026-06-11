@@ -35,9 +35,10 @@
 
 .mh-logo {
   font-family: var(--mh-serif);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--mh-ink);
   text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
 .mh-nav-links {

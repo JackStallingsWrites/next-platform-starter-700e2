@@ -5,8 +5,8 @@ import BookingForm from 'components/booking-form';
 import ScrollFade from 'components/scroll-fade';
 
 export const metadata = {
-    title: 'Mirror House Photography',
-    description: 'What the camera sees. What the mirror keeps.'
+    title: 'The Silver Seraphim',
+    description: 'What the camera sees. What the mirror keeps. — thesilverseraphim.com'
 };
 
 export default function Page() {

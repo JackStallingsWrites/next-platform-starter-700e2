@@ -3,7 +3,7 @@ export default function MirrorFooter() {
         <footer className="mh-footer">
             <div className="mh-footer-inner">
                 <div className="mh-footer-brand">
-                    <span className="mh-logo">Mirror House</span>
+                    <span className="mh-logo">The Silver Seraphim</span>
                     <p>Photography for celebration and for softness.</p>
                 </div>
 
@@ -17,14 +17,14 @@ export default function MirrorFooter() {
                     <div>
                         <p className="mh-footer-heading">Connect</p>
                         <a href="#book">Book a session</a>
-                        <a href="mailto:hello@mirrorhouse.photo">hello@mirrorhouse.photo</a>
-                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="mailto:silver@thesilverseraphim.com">silver@thesilverseraphim.com</a>
+                        <a href="https://thesilverseraphim.com" target="_blank" rel="noopener noreferrer">thesilverseraphim.com</a>
                     </div>
                 </div>
             </div>
 
             <div className="mh-footer-base">
-                <span>© {new Date().getFullYear()} Mirror House Photography</span>
+                <span>© {new Date().getFullYear()} The Silver Seraphim</span>
                 <span>All galleries are private by default.</span>
             </div>
         </footer>
