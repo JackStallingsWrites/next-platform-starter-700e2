@@ -20,6 +20,7 @@ export default function Page() {
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
                     <span className="mh-eyebrow">Silver Seraphim — Boudoir Photography</span>
+                    <div className="mh-hero-rule" aria-hidden="true" />
                     <h1 className="mh-h1">
                         You already know
                         <em className="mh-h1-em">why you&apos;re here.</em>
@@ -33,7 +34,7 @@ export default function Page() {
                     <div className="mh-about-grid">
                         <ScrollFade>
                             <span className="mh-section-num">00</span>
-                            <h2 className="mh-h2">Two rooms.<br />One mirror.</h2>
+                            <h2 className="mh-h2"><span className="mh-h2-roman">Two rooms.</span><br />One mirror.</h2>
                         </ScrollFade>
 
                         <ScrollFade delay={130}>
@@ -126,6 +127,7 @@ export default function Page() {
                 {/* ── Signal / Newsletter ──────────────────────── */}
                 <section className="mh-section-signal">
                     <ScrollFade>
+                        <div className="mh-signal-rule" aria-hidden="true" />
                         <h2 className="mh-signal-heading">Stay in the light.</h2>
                         <p className="mh-signal-body">
                             Occasional dispatches — new work, open sessions, the kind of

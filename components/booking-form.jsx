@@ -60,7 +60,7 @@ export default function BookingForm() {
                 name="message"
                 placeholder="Tell me what you're carrying into the room"
             />
-            <button className="mh-btn" type="submit">
+            <button className="mh-btn mh-btn-outline" type="submit">
                 Send inquiry
             </button>
         </form>
