@@ -38,7 +38,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.fade').forEach((el, i) => {
+document.querySelectorAll('.fade').forEach((el) => {
   el.style.transitionDelay = el.dataset.delay ? `${el.dataset.delay}ms` : '0ms';
   observer.observe(el);
 });
@@ -55,12 +55,27 @@ document.querySelector('#bookingForm').addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     });
-  } catch (_) {
-    // on preview / local, fetch may fail — show success anyway
-  }
+  } catch (_) {}
 
   form.innerHTML = `
     <div style="padding:28px 32px;border-left:2px solid #b8924a;font-family:'Cormorant Garant',Georgia,serif;font-style:italic;font-weight:300;font-size:1.25rem;line-height:1.65;color:#16100f">
       Received. I'll be in touch within 48 hours — usually sooner.
     </div>`;
+});
+
+// signal / newsletter form
+document.querySelector('#signalForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const data = new FormData(form);
+
+  try {
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    });
+  } catch (_) {}
+
+  form.innerHTML = `<p style="font-family:'Cormorant Garant',Georgia,serif;font-style:italic;font-size:1.1rem;color:rgba(245,240,232,0.55);letter-spacing:.02em;margin:0">You're in the light now. Watch for a dispatch.</p>`;
 });

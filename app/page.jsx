@@ -3,6 +3,7 @@ import MirrorFooter from 'components/mirror-footer';
 import PrivateRoomGate from 'components/private-room-gate';
 import BookingForm from 'components/booking-form';
 import ScrollFade from 'components/scroll-fade';
+import NewsletterSignup from 'components/newsletter-signup';
 
 export const metadata = {
     title: 'The Silver Seraphim',
@@ -18,23 +19,13 @@ export default function Page() {
 
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
-                    <div className="mh-hero-copy">
-                        <span className="mh-eyebrow">Portrait · Prom · Boudoir</span>
-                        <h1 className="mh-h1">
-                            What the camera sees.<br />
-                            What the mirror keeps.
-                        </h1>
-                        <p>
-                            Two kinds of images. One photographer — silver-haired, boot-wearing,
-                            and unapologetically in your corner — who knows the difference between
-                            a moment worth sharing and one worth protecting.
-                        </p>
-                        <a href="#front" className="mh-btn">Enter the front room</a>
-                    </div>
-
-                    <div className="mh-mirror-card" aria-hidden="true">
-                        <div className="mh-mirror-glass" />
-                    </div>
+                    <span className="mh-eyebrow">Silver Seraphim — Boudoir Photography</span>
+                    <h1 className="mh-h1">
+                        You already know
+                        <em className="mh-h1-em">why you&apos;re here.</em>
+                    </h1>
+                    <p className="mh-hero-subline">The mirror has been waiting.</p>
+                    <a href="#front" className="mh-hero-enter">Enter</a>
                 </section>
 
                 {/* ── About ────────────────────────────────────── */}
@@ -130,6 +121,18 @@ export default function Page() {
                         </p>
                     </ScrollFade>
                     <BookingForm />
+                </section>
+
+                {/* ── Signal / Newsletter ──────────────────────── */}
+                <section className="mh-section-signal">
+                    <ScrollFade>
+                        <h2 className="mh-signal-heading">Stay in the light.</h2>
+                        <p className="mh-signal-body">
+                            Occasional dispatches — new work, open sessions, the kind of
+                            thing that doesn&apos;t go in a feed.
+                        </p>
+                        <NewsletterSignup />
+                    </ScrollFade>
                 </section>
 
             </main>

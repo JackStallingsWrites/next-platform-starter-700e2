@@ -13,13 +13,16 @@
 <body>
 
   <header class="nav">
-    <a href="#" class="logo">The Silver Seraphim</a>
+    <a href="#" class="logo">
+      <span class="logo-silver">Silver</span>
+      <span class="logo-seraphim">Seraphim</span>
+    </a>
     <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#front">Front</a>
+      <a href="#front">The Work</a>
+      <a href="#about">The Belief</a>
       <a href="#mirror">Behind the Mirror</a>
-      <a href="#book">Book</a>
     </nav>
+    <a href="#book" class="nav-cta">Book a Session</a>
     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -28,25 +31,20 @@
   </header>
 
   <nav class="drawer" aria-hidden="true">
-    <a href="#about">About</a>
-    <a href="#front">Front</a>
+    <a href="#front">The Work</a>
+    <a href="#about">The Belief</a>
     <a href="#mirror">Behind the Mirror</a>
-    <a href="#book">Book</a>
+    <a href="#book">Book a Session</a>
   </nav>
 
   <main>
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">Portrait · Prom · Boudoir</span>
-        <h1>What the camera sees.<br>What the mirror keeps.</h1>
-        <p>Two kinds of images. One photographer — silver-haired, boot-wearing, and unapologetically in your corner — who knows the difference between a moment worth sharing and one worth protecting.</p>
-        <a href="#front" class="btn">Enter the front room</a>
-      </div>
-      <div class="mirror-card" aria-hidden="true">
-        <div class="mirror-glass"></div>
-      </div>
+      <span class="eyebrow">Silver Seraphim — Boudoir Photography</span>
+      <h1>You already know<em>why you're here.</em></h1>
+      <p class="hero-subline">The mirror has been waiting.</p>
+      <a href="#front" class="hero-enter">Enter</a>
     </section>
 
     <!-- About -->
@@ -153,12 +151,29 @@
       </form>
     </section>
 
+    <!-- Signal / Newsletter -->
+    <section class="section-signal">
+      <div class="fade">
+        <h2 class="signal-heading">Stay in the light.</h2>
+        <p class="signal-body">Occasional dispatches — new work, open sessions, the kind of thing that doesn't go in a feed.</p>
+        <form id="signalForm" class="signal-form" name="silver-seraphim-signal" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="silver-seraphim-signal" />
+          <input type="hidden" name="bot-field" />
+          <input class="signal-input" type="email" name="email" placeholder="Your email address" required />
+          <button class="signal-btn" type="submit">Signal</button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo">The Silver Seraphim</span>
+        <a href="#" class="logo">
+          <span class="logo-silver">Silver</span>
+          <span class="logo-seraphim">Seraphim</span>
+        </a>
         <p>Photography for celebration and for softness.</p>
       </div>
       <div class="footer-cols">

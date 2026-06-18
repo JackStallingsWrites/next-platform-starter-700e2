@@ -17,18 +17,18 @@ export default function MirrorNav() {
     return (
         <header className={`mh-nav${scrolled ? ' mh-nav--scrolled' : ''}`}>
             <a href="#" className="mh-logo" onClick={close}>
-                The Silver Seraphim
+                <span className="mh-logo-silver">Silver</span>
+                <span className="mh-logo-seraphim">Seraphim</span>
             </a>
 
-            {/* desktop links */}
             <nav className="mh-nav-links">
-                <a href="#about">About</a>
-                <a href="#front">Front</a>
+                <a href="#front">The Work</a>
+                <a href="#about">The Belief</a>
                 <a href="#mirror">Behind the Mirror</a>
-                <a href="#book">Book</a>
             </nav>
 
-            {/* mobile hamburger */}
+            <a href="#book" className="mh-nav-cta">Book a Session</a>
+
             <button
                 className="mh-hamburger"
                 aria-label="Toggle menu"
@@ -40,12 +40,11 @@ export default function MirrorNav() {
                 <span className={`mh-hamburger-bar${open ? ' open' : ''}`} />
             </button>
 
-            {/* mobile drawer */}
             <nav className={`mh-drawer${open ? ' mh-drawer--open' : ''}`} aria-hidden={!open}>
-                <a href="#about" onClick={close}>About</a>
-                <a href="#front" onClick={close}>Front</a>
+                <a href="#front" onClick={close}>The Work</a>
+                <a href="#about" onClick={close}>The Belief</a>
                 <a href="#mirror" onClick={close}>Behind the Mirror</a>
-                <a href="#book" onClick={close}>Book</a>
+                <a href="#book" onClick={close}>Book a Session</a>
             </nav>
         </header>
     );

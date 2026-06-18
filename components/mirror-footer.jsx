@@ -3,7 +3,10 @@ export default function MirrorFooter() {
         <footer className="mh-footer">
             <div className="mh-footer-inner">
                 <div className="mh-footer-brand">
-                    <span className="mh-logo">The Silver Seraphim</span>
+                    <a href="#" className="mh-logo">
+                        <span className="mh-logo-silver">Silver</span>
+                        <span className="mh-logo-seraphim">Seraphim</span>
+                    </a>
                     <p>Photography for celebration and for softness.</p>
                 </div>
 
