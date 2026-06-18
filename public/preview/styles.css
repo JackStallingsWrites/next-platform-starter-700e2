@@ -243,7 +243,6 @@ body {
 .section-light   { background: #faf5ed; }
 .section-dark    { position: relative; background: var(--deep); color: var(--cream); overflow: hidden; }
 .section-about   { background: var(--cream); border-top: 1px solid rgba(22,16,15,.08); }
-.section-booking { background: var(--cream-2); }
 
 /* grain */
 .section-dark::before {

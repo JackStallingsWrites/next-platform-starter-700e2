@@ -616,7 +616,7 @@ textarea.mh-field {
   font-style: italic;
   font-weight: 300;
   font-size: 1.25rem;
-  color: var(--ink);
+  color: var(--cream);
   max-width: 580px;
   line-height: 1.65;
 }
