@@ -59,8 +59,22 @@ html { scroll-behavior: smooth; }
   gap: 0.35em;
 }
 
+.mh-logo-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+}
 .mh-logo-silver   { color: #e8e0d0; }
 .mh-logo-seraphim { color: var(--gold); }
+
+/* real logo image — black background drops out against dark via screen blend */
+.mh-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+  mix-blend-mode: screen;
+}
+.mh-footer-brand .mh-logo-img { height: 40px; }
 
 .mh-nav-links {
   display: flex;
@@ -185,6 +199,14 @@ html { scroll-behavior: smooth; }
   height: 48px;
   background: linear-gradient(to bottom, transparent, rgba(184, 146, 74, 0.6), transparent);
   margin: 28px auto 36px;
+}
+
+/* hero logo mark — black background drops out against dark via screen blend */
+.mh-hero-mark {
+  width: min(84%, 580px);
+  height: auto;
+  margin: 0 auto 18px;
+  mix-blend-mode: screen;
 }
 
 .mh-section-num {

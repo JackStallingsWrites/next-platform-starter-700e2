@@ -1,3 +1,19 @@
+// logo image fallback — reveal text/markup if a logo file is missing
+document.querySelectorAll('.logo-img').forEach(img => {
+  img.addEventListener('error', () => {
+    img.hidden = true;
+    const fb = img.parentElement.querySelector('.logo-text');
+    if (fb) fb.hidden = false;
+  });
+});
+document.querySelectorAll('.hero-mark').forEach(img => {
+  img.addEventListener('error', () => {
+    img.hidden = true;
+    const fb = img.parentElement.querySelector('.hero-fallback');
+    if (fb) fb.hidden = false;
+  });
+});
+
 // nav scroll state
 const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {

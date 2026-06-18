@@ -1,11 +1,12 @@
+import BrandLogo from 'components/brand-logo';
+
 export default function MirrorFooter() {
     return (
         <footer className="mh-footer">
             <div className="mh-footer-inner">
                 <div className="mh-footer-brand">
                     <a href="#" className="mh-logo">
-                        <span className="mh-logo-silver">Silver</span>
-                        <span className="mh-logo-seraphim">Seraphim</span>
+                        <BrandLogo />
                     </a>
                     <p>Photography for celebration and for softness.</p>
                 </div>

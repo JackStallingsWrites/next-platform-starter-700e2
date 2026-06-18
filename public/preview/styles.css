@@ -51,8 +51,12 @@ body {
   align-items: baseline;
   gap: 0.35em;
 }
+.logo-text { display: inline-flex; align-items: baseline; gap: .35em; }
 .logo-silver   { color: #e8e0d0; }
 .logo-seraphim { color: var(--gold); }
+.logo-img { height: 34px; width: auto; display: block; mix-blend-mode: screen; }
+.footer-logo-img { height: 40px; }
+[hidden] { display: none !important; }
 
 .nav-links {
   display: flex;
@@ -159,6 +163,8 @@ body {
   background: linear-gradient(to bottom, transparent, rgba(184,146,74,.6), transparent);
   margin: 28px auto 36px;
 }
+.hero-mark { width: min(84%, 580px); height: auto; margin: 0 auto 18px; mix-blend-mode: screen; }
+.hero-fallback { display: flex; flex-direction: column; align-items: center; }
 .section-num {
   display: block;
   font-family: var(--serif-sc);

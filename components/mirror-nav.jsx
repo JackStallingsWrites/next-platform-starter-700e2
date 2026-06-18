@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import BrandLogo from 'components/brand-logo';
 
 export default function MirrorNav() {
     const [open, setOpen] = useState(false);
@@ -17,8 +18,7 @@ export default function MirrorNav() {
     return (
         <header className={`mh-nav${scrolled ? ' mh-nav--scrolled' : ''}`}>
             <a href="#" className="mh-logo" onClick={close}>
-                <span className="mh-logo-silver">Silver</span>
-                <span className="mh-logo-seraphim">Seraphim</span>
+                <BrandLogo />
             </a>
 
             <nav className="mh-nav-links">

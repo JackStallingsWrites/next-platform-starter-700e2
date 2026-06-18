@@ -4,6 +4,7 @@ import PrivateRoomGate from 'components/private-room-gate';
 import BookingForm from 'components/booking-form';
 import ScrollFade from 'components/scroll-fade';
 import NewsletterSignup from 'components/newsletter-signup';
+import HeroMark from 'components/hero-mark';
 
 export const metadata = {
     title: 'The Silver Seraphim',
@@ -19,12 +20,7 @@ export default function Page() {
 
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
-                    <span className="mh-eyebrow">Silver Seraphim — Boudoir Photography</span>
-                    <div className="mh-hero-rule" aria-hidden="true" />
-                    <h1 className="mh-h1">
-                        You already know
-                        <em className="mh-h1-em">why you&apos;re here.</em>
-                    </h1>
+                    <HeroMark />
                     <p className="mh-hero-subline">The mirror has been waiting.</p>
                     <a href="#front" className="mh-hero-enter">Enter</a>
                 </section>
