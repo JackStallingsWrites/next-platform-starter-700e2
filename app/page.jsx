@@ -20,9 +20,11 @@ export default function Page() {
 
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
-                    <HeroMark />
-                    <p className="mh-hero-subline">The mirror has been waiting.</p>
-                    <a href="#front" className="mh-hero-enter">Enter</a>
+                    <div className="mh-hero-content">
+                        <HeroMark />
+                        <p className="mh-hero-subline">The mirror has been waiting.</p>
+                        <a href="#front" className="mh-hero-enter">Enter</a>
+                    </div>
                 </section>
 
                 {/* ── About ────────────────────────────────────── */}

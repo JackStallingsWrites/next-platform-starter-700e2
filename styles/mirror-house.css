@@ -174,14 +174,43 @@ html { scroll-behavior: smooth; }
 /* ── hero ─────────────────────────────────────────── */
 
 .mh-hero {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   padding: 120px 8vw 100px;
-  background: radial-gradient(ellipse at 50% 38%, #1e1214 0%, #0d0b0d 100%);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(13, 11, 13, 0.96), rgba(13, 11, 13, 0.78) 34%, rgba(13, 11, 13, 0.16) 62%, rgba(13, 11, 13, 0.34)),
+    radial-gradient(ellipse at 50% 38%, #1e1214 0%, #0d0b0d 100%);
+}
+
+.mh-hero::before {
+  content: '';
+  position: absolute;
+  inset: 84px 0 0;
+  z-index: -2;
+  background: url('/images/landing/perspective-hero.jpg') right center / contain no-repeat;
+}
+
+.mh-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(13, 11, 13, 0.88) 0%, rgba(13, 11, 13, 0.54) 38%, rgba(13, 11, 13, 0.04) 68%),
+    linear-gradient(to bottom, rgba(13, 11, 13, 0.58), rgba(13, 11, 13, 0.16) 42%, rgba(13, 11, 13, 0.7));
+  pointer-events: none;
+}
+
+.mh-hero-content {
+  width: min(48vw, 620px);
+  min-width: 340px;
 }
 
 .mh-eyebrow {
@@ -201,11 +230,11 @@ html { scroll-behavior: smooth; }
   margin: 28px auto 36px;
 }
 
-/* hero logo mark — black background drops out against dark via screen blend */
-.mh-hero-mark {
-  width: min(84%, 580px);
+/* hero wordmark — black background drops out against dark via screen blend */
+.mh-hero-wordmark {
+  width: min(100%, 540px);
   height: auto;
-  margin: 0 auto 18px;
+  margin: 0 0 18px;
   mix-blend-mode: screen;
 }
 
@@ -796,6 +825,27 @@ textarea.mh-field {
 /* ── responsive ───────────────────────────────────── */
 
 @media (max-width: 860px) {
+  .mh-hero {
+    justify-content: flex-end;
+    padding: 112px 7vw 80px;
+  }
+
+  .mh-hero::before {
+    inset: 76px 0 30%;
+    background-position: right top;
+  }
+
+  .mh-hero::after {
+    background:
+      linear-gradient(to bottom, rgba(13, 11, 13, 0.12) 0%, rgba(13, 11, 13, 0.5) 48%, rgba(13, 11, 13, 0.92) 100%),
+      linear-gradient(90deg, rgba(13, 11, 13, 0.76), rgba(13, 11, 13, 0.08) 70%);
+  }
+
+  .mh-hero-content {
+    width: min(100%, 520px);
+    min-width: 0;
+  }
+
   .mh-about-grid,
   .mh-gallery-grid,
   .mh-private-room,
