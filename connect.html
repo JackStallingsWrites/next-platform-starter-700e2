@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect — Silver Seraphim</title>
+<meta name="description" content="Start the conversation. Tell me what you want to make.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap">
+  <div class="mast">
+    <a class="name" href="index.html">Silver <b>Seraphim</b></a>
+    <nav class="nav-5" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="art.html">The Art</a>
+      <a href="experience.html">The Experience</a>
+      <a href="about.html">About</a>
+      <a href="connect.html" aria-current="page">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap page-hero">
+    <span class="eyebrow">Connect</span>
+    <h1>Tell me what you want to make.</h1>
+    <p class="frame">Not your availability, not your budget — not yet. Start with the image in your head, or the feeling you can't quite name. Everything else follows from there, and the first step is always a conversation.</p>
+  </section>
+
+  <section class="book" style="border-top:none;padding-top:0">
+    <div class="wrap">
+      <form class="intake" aria-label="Start a conversation" onsubmit="return false;">
+        <div class="field">
+          <label for="vision">What are you hoping to create?</label>
+          <textarea id="vision" name="vision" placeholder="The concept, the mood, the version of yourself you've been wanting to see — however rough. There are no wrong answers here."></textarea>
+          <p class="hint">This is the only question that really matters. The rest is logistics.</p>
+        </div>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="What should I call you?">
+        </div>
+        <div class="field">
+          <label for="email">Where can I reach you?</label>
+          <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="when">Any timing in mind? <span style="text-transform:none;letter-spacing:0;font-style:italic;color:var(--silver-lo)">(optional)</span></label>
+          <input id="when" name="when" type="text" placeholder="A season, an occasion, or 'no rush' — we'll plan with the time it deserves.">
+        </div>
+        <button class="send" type="submit">Send it to Silver</button>
+        <p class="privacy">Your message is held in confidence. We'll start with a conversation to make sure we're on the same page before anything is planned. Nothing you share — and no image we might make — is ever posted, discussed, or displayed without your explicit consent.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Silver Seraphim</h4>
+        <p class="credo">Art deserves trust. So do the people creating it.</p>
+      </div>
+      <div>
+        <h4>Find me</h4>
+        <ul class="socials">
+          <li><a href="https://instagram.com/thesilverseraphim" target="_blank" rel="noopener noreferrer">Instagram — @thesilverseraphim ↗</a></li>
+          <li><a href="connect.html">Start a conversation</a></li>
+        </ul>
+        <p class="fine">Respectful collaboration inquiries are always welcome.<br>Consent, discretion, and care at every stage.</p>
+        <p class="studio">A room shaped by Studio by Jack</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
