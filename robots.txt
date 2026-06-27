@@ -1,0 +1,4 @@
+# Silver Seraphim — all pages public (no hidden rooms in this structure)
+User-agent: *
+Allow: /
+Sitemap: https://thesilverseraphim.com/sitemap.xml

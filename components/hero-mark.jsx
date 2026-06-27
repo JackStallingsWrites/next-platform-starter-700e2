@@ -17,7 +17,7 @@ export default function HeroMark() {
 
     return (
         <img
-            src="/logo-mark.png"
+            src="/logo-wordmark.png"
             alt="The Silver Seraphim"
             className="mh-hero-mark"
             onError={() => setFailed(true)}
