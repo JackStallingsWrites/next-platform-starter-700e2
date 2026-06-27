@@ -20,9 +20,18 @@ export default function Page() {
 
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
-                    <HeroMark />
-                    <p className="mh-hero-subline">The mirror has been waiting.</p>
-                    <a href="#front" className="mh-hero-enter">Enter</a>
+                    <div className="mh-hero-media" aria-hidden="true">
+                        <img src="/images/perspective-hero.jpg" alt="" />
+                    </div>
+                    <div className="mh-hero-content">
+                        <HeroMark />
+                        <p className="mh-hero-kicker">Portraiture for the image you choose to keep.</p>
+                        <p className="mh-hero-subline">Front-room celebrations. Private-room reclamation. One mirror, and no borrowed gaze.</p>
+                        <div className="mh-hero-actions">
+                            <a href="#front" className="mh-hero-primary">See the work</a>
+                            <a href="#book" className="mh-hero-enter">Book a session</a>
+                        </div>
+                    </div>
                 </section>
 
                 {/* ── About ────────────────────────────────────── */}
@@ -68,6 +77,7 @@ export default function Page() {
                     <div className="mh-gallery-grid">
                         <ScrollFade delay={0}>
                             <article className="mh-tile mh-tile-prom">
+                                <img className="mh-tile-image mh-tile-image-prom" src="/images/perspective-hero.jpg" alt="" />
                                 <div className="mh-tile-body">
                                     <span className="mh-tile-label">Prom &amp; Senior</span>
                                     <p className="mh-tile-line">The night you&apos;ve been waiting for.</p>
@@ -76,6 +86,7 @@ export default function Page() {
                         </ScrollFade>
                         <ScrollFade delay={90}>
                             <article className="mh-tile mh-tile-senior">
+                                <img className="mh-tile-image mh-tile-image-senior" src="/images/perspective-hero.jpg" alt="" />
                                 <div className="mh-tile-body">
                                     <span className="mh-tile-label">Senior Portraits</span>
                                     <p className="mh-tile-line">Before everything changes.</p>
@@ -84,6 +95,7 @@ export default function Page() {
                         </ScrollFade>
                         <ScrollFade delay={180}>
                             <article className="mh-tile mh-tile-family">
+                                <img className="mh-tile-image mh-tile-image-family" src="/images/perspective-hero.jpg" alt="" />
                                 <div className="mh-tile-body">
                                     <span className="mh-tile-label">Family &amp; Couples</span>
                                     <p className="mh-tile-line">The shape of us, right now.</p>

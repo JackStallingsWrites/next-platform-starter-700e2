@@ -1,0 +1,4 @@
+# Clean URLs for the five-page site
+/home          /index.html         200
+/the-art       /art.html           200
+/the-experience /experience.html   200
