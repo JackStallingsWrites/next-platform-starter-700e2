@@ -194,6 +194,8 @@ html { scroll-behavior: smooth; }
   margin-bottom: 0;
 }
 
+.mh-hero-eyebrow { margin: 4px 0 18px; }
+
 .mh-hero-rule {
   width: 1px;
   height: 48px;

@@ -21,7 +21,8 @@ export default function Page() {
                 {/* ── Hero ─────────────────────────────────────── */}
                 <section className="mh-hero">
                     <HeroMark />
-                    <p className="mh-hero-subline">The mirror has been waiting.</p>
+                    <span className="mh-eyebrow mh-hero-eyebrow">Fine Art Portraiture</span>
+                    <p className="mh-hero-subline">Every portrait tells a story. Let&apos;s create yours.</p>
                     <a href="#front" className="mh-hero-enter">Enter</a>
                 </section>
 

@@ -8,7 +8,7 @@ export default function MirrorFooter() {
                     <a href="#" className="mh-logo">
                         <BrandLogo />
                     </a>
-                    <p>Photography for celebration and for softness.</p>
+                    <p>Capturing art intentionally — revealing the beauty within.</p>
                 </div>
 
                 <div className="mh-footer-cols">

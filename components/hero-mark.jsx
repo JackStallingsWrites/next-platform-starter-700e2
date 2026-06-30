@@ -8,7 +8,7 @@ export default function HeroMark() {
     if (failed) {
         return (
             <>
-                <span className="mh-eyebrow">Silver Seraphim — Boudoir Photography</span>
+                <span className="mh-eyebrow">Fine Art Portraiture</span>
                 <div className="mh-hero-rule" aria-hidden="true" />
                 <h1 className="mh-h1">The Silver Seraphim</h1>
             </>

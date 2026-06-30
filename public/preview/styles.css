@@ -157,6 +157,7 @@ body {
   font-weight: 300;
   margin-bottom: 0;
 }
+.hero-eyebrow { margin: 4px 0 18px; }
 .hero-rule {
   width: 1px;
   height: 48px;
